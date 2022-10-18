@@ -22,14 +22,14 @@ public class AfishaManager {
     }
     public String [] findLast() {
         int moviesCount;
-        if (movies.length < limit) {
+        if (movies.length <= limit) {
             moviesCount = movies.length;
         } else {
             moviesCount = limit;
         }
         String[] tmp = new String[moviesCount];
-        for (int i = 0; i < movies.length; i++) {
-            tmp[i] = movies[movies.length - 1 - i];
+        for (int i = 0; i < moviesCount; i++) {
+            tmp[i] = movies[moviesCount- 1 - i];
         }
         return tmp;
     }
